@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.custom {
+    after = common
+    header = Custom Content Elements
+    elements {
+        location {
+            iconIdentifier = smediafrontend-location
+            title = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.location
+            description = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.location.description
+            tt_content_defValues {
+                CType = location
+            }
+        }
+    }
+    show := addToList(location)
+}

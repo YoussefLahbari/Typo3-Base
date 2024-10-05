@@ -1,0 +1,22 @@
+// @import "EXT:smedia_news/Configuration/TypoScript/ContentElements/news.typoscript";
+plugin.tx_smedianews {
+	mvc.callDefaultActionIfActionCantBeResolved = 1
+
+	view {
+		templateRootPaths {
+			10 = {$plugin.tx_smedianews.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			10 = {$plugin.tx_smedianews.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			10 = {$plugin.tx_smedianews.view.layoutRootPath}
+		}
+	}
+
+	// settings {
+	// 	detailsPageUid = 48
+	//    }
+}

@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as *;
+.downloads {
+    margin-bottom: 4rem;
+    .section-title {
+        font-size: 2.2rem;
+        font-weight:lighter;
+        padding: 3% 0 3% 6%;
+        color: $primary-color;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .downloads-category {
+      margin-left: 5rem;
+      margin-right: 5rem;
+  
+      .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .d-action {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .d-action.rotate {
+            transform: rotate(180deg); 
+        }   
+    }
+    .category-sep{
+        border-top: 3px solid black;
+    } 
+
+      .download-list {
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+      }
+      .download-list.hidden {
+        display: none;
+    }
+  
+      .download-item {
+        margin-bottom: 1rem;
+      }
+  
+      .download-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+  
+        .download-icon {
+          width: 20px;
+          height: 20px;
+          margin-left: 0.5rem;
+          background-image: url('path/to/your/download-icon.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .slide-button {
+        width: fit-content;
+        display: block;
+        margin: auto;
+        padding: 0.5rem 1rem;
+        background-color: #000; 
+        border: none; 
+        border-radius: 6px; 
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #333; 
+            color: #fff;
+        }
+    }
+  }

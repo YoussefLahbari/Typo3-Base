@@ -1,0 +1,44 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="downloads">
+        <h1 class="section-title">{data.header}</h1> 
+        
+        <f:for each="{downloads}" as="category" iteration="iteration">
+            <div class="downloads-category">
+                <h3 class="category-title">
+                    {category.data.category}
+                    <span class="d-action">
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.46982 9.41748C8.03232 9.41748 7.65732 9.22998 7.40732 8.91748L1.28232 1.91748C0.844816 1.41748 0.907316 0.72998 1.40732 0.29248C1.90732 -0.0825195 2.59482 -0.0825195 2.96982 0.41748L8.34482 6.54248C8.40732 6.60498 8.46982 6.60498 8.53232 6.54248L13.9073 0.41748C14.3448 -0.0825195 15.0323 -0.14502 15.5323 0.29248C16.0323 0.72998 16.0948 1.41748 15.6573 1.91748L15.5948 1.97998L9.53232 8.91748C9.28232 9.22998 8.84482 9.41748 8.46982 9.41748Z" fill="black"/>
+                            </svg>                            
+                    </span>
+                </h3>
+                <hr class="category-sep">
+                <ul class="download-list">
+                    <f:for each="{category.files}" as="item">
+                        <li class="download-item">
+                            <a href="{item.publicUrl}" download class="download-link">
+                                {item.originalFile.name}
+                                <span class="download-icon">
+                                    <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 15.5557V19.0001C1 19.5524 1.44772 20.0001 2 20.0001H21.1111C21.6634 20.0001 22.1111 19.5524 22.1111 19.0001V15.5557" stroke="black" stroke-width="1.5"/>
+                                        <path d="M12.1111 0V14.4444" stroke="black" stroke-width="1.5"/>
+                                        <path d="M6.55554 8.88892L11.9629 14.4445L17.6667 8.88892" stroke="black" stroke-width="1.5"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+        </f:for>
+
+        <f:if condition="{data.action_link}">
+            <f:link.typolink parameter="{data.action_link}" class="slide-button">
+                {data.action_text}
+            </f:link.typolink>
+        </f:if>
+    </div>
+</f:section>
+</html>

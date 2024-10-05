@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.custom {
+    after = common
+    header = Custom Content Elements
+    elements {
+        downloads {
+            iconIdentifier = smediafrontend-downloads
+            title = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.downloads
+            description = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.downloads.description
+            tt_content_defValues {
+                CType = downloads
+            }
+        }
+    }
+    show := addToList(downloads)
+}

@@ -1,0 +1,116 @@
+// // Variables for easy theme customization
+$primary-color: #007bff; // Adjust to match the button color
+$input-border-color: #ced4da;
+$input-background-color: #ffffff;
+$input-focus-border-color: #80bdff;
+$input-focus-shadow-color: rgba(0, 123, 255, 0.25);
+$input-shadow: rgba(0, 0, 0, 0.1);
+$textarea-height: 200px;
+$form-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Form styles
+.ce_form_formframework {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  padding-left: 22%;
+
+input,
+textarea {
+  background-color: $input-background-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 3px solid rgba(0, 0, 0, 0.24) ;
+  border-radius: 10px;
+  padding: 10px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 0 0.2rem $input-focus-shadow-color;
+    outline: none;
+  }
+
+}
+// Specific field styling
+input[type='text'],
+input[type='email'] {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 75%;
+  height: $textarea-height;
+  resize: none;
+}
+
+// Button styling
+button[type='submit'] {
+  background-color: $primary-color;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Row layout styling
+.row {
+  width: 80%;
+}
+
+.col-6 {
+  flex: 0 0 48%; // Adjusts the columns to fit two in one row with spacing
+}
+
+// Shadows for the form fields
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+// Labels (if required for specific fields)
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+
+
+ .actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+    margin-top: 3%;
+    
+    .btn {
+      background-color: #000;
+      color: #fff;
+      padding: 0.7rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #444;
+        cursor: pointer;
+      }
+    }
+}
+}

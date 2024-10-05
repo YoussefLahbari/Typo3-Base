@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  SchommerMedia\SmediaNews\:
+    resource: '../Classes/*'
+  SchommerMedia\SmediaNews\Command\ImportDataCommand:
+    tags:
+      - name: 'console.command'
+        
+  

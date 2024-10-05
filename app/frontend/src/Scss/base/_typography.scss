@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+body {
+    font-family:'Inter', sans-serif;
+}
+
+h1, .h1 {
+    font-size: 2rem;
+    font-family: 'Anton', sans-serif;
+}
+
+h2, .h2 {
+    font-size: 1.75rem;
+}
+
+h3, .h3 {
+    font-size: 1.5rem;
+}
+
+h4, .h4 {
+    font-size: 1.25rem;
+}
+
+h5, .h5 {
+    font-size: 1rem;
+}
+
+section {
+    &.space-after-extra-small {
+        margin-bottom: 1.25rem;
+    }
+
+    &.space-after-small {
+        margin-bottom: 2.5rem;
+
+    }
+
+    &.space-after-medium {
+        margin-bottom: 3.75rem;
+    }
+
+    &.space-after-large {
+        margin-bottom: 5rem;
+    }
+
+    &.space-after-extra-large {
+        margin-bottom: 6.25rem;
+    }
+
+    &.space-before-extra-small {
+        margin-top: 1.25rem;
+    }
+
+    &.space-before-small {
+        margin-top: 2.5rem;
+    }
+
+    &.space-before-medium {
+        margin-top: 3.75rem;
+    }
+
+    &.space-before-large {
+        margin-top: 5rem;
+    }
+
+    &.space-before-extra-large {
+        margin-top: 6.25rem;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

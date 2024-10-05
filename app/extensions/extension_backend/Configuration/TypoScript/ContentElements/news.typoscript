@@ -1,0 +1,28 @@
+tt_content.smedianews_news =< lib.contentElement
+tt_content.smedianews_news {
+    templateName = smedianews_news
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_smedianews_smedianews_news_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                    as = image
+                }
+            }
+
+            as = smedianews_news
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import 'EXT:smedia_frontend/Configuration/TypoScript/ContentElement/constants.typoscript'
+config {
+    compressCss = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+}
+
+page {
+    favicon {
+        file = EXT:smedia_frontend/Resources/Public/Icons/favicon.ico
+    }
+    menu.footerMenu = 3
+    menu.metaMenu = 15
+}
+

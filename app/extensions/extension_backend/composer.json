@@ -1,0 +1,26 @@
+{
+    "name": "schommer-media/smedia-news",
+    "type": "typo3-cms-extension",
+    "description": "Schommer Media News Extension delivers a full configured News extension for TYPO3.",
+    "homepage": "https://www.schommer-media.de",
+"license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "version": "v0.0.1",
+    "authors": [
+        {
+            "name": "Youssef Lahbari",
+            "email": "y.lahbari@schommer-media.de",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SchommerMedia\\SmediaNews\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "smedia_news"
+        }
+    }
+}

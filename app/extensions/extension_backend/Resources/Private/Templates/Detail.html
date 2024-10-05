@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+<f:section name="Header">
+    <f:asset.css identifier="styles" href="EXT:smedia_news/Resources/Public/Css/styles.css" />
+</f:section>
+<f:section name="Main">
+    <f:debug>{_all}</f:debug>
+    <article>
+        <h1>News details</h1>
+        <h2>{new.title}</h2>
+        <p>{new.teaser}</p>
+        <div>
+            {new.bodytext -> f:format.html()}
+        </div>
+        <!-- Loop through media files -->
+        <f:if condition="{new.media}">
+            <f:then>
+              <f:for each="{new.media}" as="mediaItem">
+                <!-- Render the media file -->
+                <f:if condition="{mediaItem.uid} == {new.media.0.uid}">
+                  <f:image class="news-img" image="{mediaItem}" alt="{new.title}" />
+                </f:if>
+              </f:for>
+            </f:then>
+            <f:else>
+              <!-- Image placeholder -->
+                <img src="https://via.placeholder.com/350x150" alt="{new.title}" />
+            </f:else>
+          </f:if>
+    </article>
+</f:section>

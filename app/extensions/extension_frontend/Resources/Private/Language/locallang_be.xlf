@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="smedia_frontend">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="content_element.simple">
+                <source>Simple Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.simple.description">
+                <source>Simple Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.inline">
+                <source>Inline Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.inline.description">
+                <source>Inline Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.slider">
+                <source>Slider Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.slider.description">
+                <source>Slider taking the hero section, full width with Controls, text, action button and pagination bullets.</source>
+            </trans-unit>
+            <trans-unit id="content_element.brand">
+                <source>Brand Slider Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.brand.description">
+                <source>Brand Slider having three slides for large screens, with text and action button</source>
+            </trans-unit>
+            <trans-unit id="content_element.service">
+                <source>Service Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.service.description">
+                <source>Service Section having image</source>
+            </trans-unit>
+            <trans-unit id="content_element.model">
+                <source>Model Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.model.description">
+                <source>Model Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.downloads">
+                <source>Downloads Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.downloads.description">
+                <source>Downloads Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.location">
+                <source>Location Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.location.description">
+                <source>Location Description</source>
+            </trans-unit>
+            <trans-unit id="content_element.similar">
+                <source>Similar Content Element</source>
+            </trans-unit>
+            <trans-unit id="content_element.similar.description">
+                <source>Similar Description</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+

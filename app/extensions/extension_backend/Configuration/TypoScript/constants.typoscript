@@ -1,0 +1,7 @@
+plugin.tx_smedianews {
+	view {
+		templateRootPath = EXT:smedia_news/Resources/Private/Templates/
+		partialRootPath = EXT:smedia_news/Resources/Private/Partials/
+		layoutRootPath  = EXT:smedia_news/Resources/Private/Layouts/
+	}
+}

@@ -1,0 +1,4 @@
+tt_content.location =< lib.contentElement
+tt_content.location {
+    templateName = location
+}

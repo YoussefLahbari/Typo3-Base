@@ -1,0 +1,12 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+    <h2>{data.title}</h2>
+
+    <f:format.html parseFuncTSPath="lib.parseFunc">{data.bodytext}</f:format.html>
+
+    <f:if condition="{image.0}">
+        <f:image src="{image.0.uid}" treatIdAsReference="true" />
+    </f:if>
+</f:section>

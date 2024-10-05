@@ -1,0 +1,19 @@
+// tt_content.cd-detail-section =< lib.contentElement
+// tt_content.cd-detail-section {
+//     templateName = CdDetailSection
+//     templateRootPaths {
+//         10 = EXT:site_cdmanual/Resources/Private/Templates/Content/
+//     }
+//     dataProcessing {
+//         10 = B13\Container\DataProcessing\ContainerProcessor
+//         10 {
+//             colPos = 201
+//             as = mainColumn
+//         }
+//         20 = B13\Container\DataProcessing\ContainerProcessor
+//         20 {
+//             colPos = 202
+//             as = sidebarContent
+//         }
+//     }
+// }

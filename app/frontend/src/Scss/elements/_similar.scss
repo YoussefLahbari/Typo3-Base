@@ -1,0 +1,103 @@
+@use '../abstracts/variables' as *;
+
+
+// Swiper Slider Styles
+.similar-products {
+    .similar-title {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight:lighter;
+        padding: 5% 0 3% 5%;
+        color: $primary-color;
+    }
+    .tabs-container {
+        position: relative;
+    }
+    
+    .nav-tabs {
+        border-bottom: none;
+    }
+    
+    .nav-tabs .nav-link {
+        border: none;
+        color: #495057;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-tabs .nav-link:hover,
+    .nav-tabs .nav-link.active {
+        text-decoration: none;
+        color: #000;
+        background-color: transparent;
+    }
+    
+    .tab-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: #b1af6c;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-tabs {
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        .nav-item {
+            margin-right: 15px;
+        }
+
+        .nav-link {
+            position: relative;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #999;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .product-card {
+        margin-top: 20px;
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-img {
+            border-radius: 10px;
+            width: 90%;
+            height: auto;
+            // object-fit: cover;
+        }
+
+        .product-description {
+            margin: 1rem 0;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .product-button {
+            width: fit-content;
+            display: block;
+            margin: auto;
+            padding: 0.5rem 1rem;
+            background-color: #000; 
+            border: none; 
+            border-radius: 6px; 
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            transition: background-color 0.3s;
+    
+            &:hover {
+                background-color: #333; 
+                color: #fff;
+            }
+        }
+    }
+}

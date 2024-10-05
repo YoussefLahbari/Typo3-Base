@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <f:for each="{slider}" as="item">
+                <f:if condition="{item.image}">
+                    <f:for each="{item.image}" as="image">
+                        <div class="swiper-slide">
+                            <f:image class="hero-img" image="{image}" alt="{item.data.title}" treatIdAsReference="true" />
+                            <div class="slide-content">
+                                <h1 class="slide-title">{item.data.header}</h1>
+                                <p class="slide-subtitle">{item.data.subheader}</p>
+                                <f:if condition="{item.data.button_link}">
+                                    <f:link.typolink parameter="{item.data.button_link}" class="slide-button">
+                                        {item.data.button_text}
+                                    </f:link.typolink>
+                                </f:if>
+                            </div>
+                        </div>
+                    </f:for>
+                </f:if>
+            </f:for>
+        </div>
+        
+        <div class="hero-prev swiper-button-prev"></div>
+        <div class="hero-next swiper-button-next"></div>
+        <div class="hero-pag swiper-pagination"></div>
+    </div>
+</f:section>

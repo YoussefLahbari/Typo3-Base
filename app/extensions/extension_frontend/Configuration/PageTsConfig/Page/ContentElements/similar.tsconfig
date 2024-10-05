@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.custom {
+    after = common
+    header = Custom Content Elements
+    elements {
+        similar {
+            iconIdentifier = smediafrontend-similar
+            title = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.similar
+            description = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.similar.description
+            tt_content_defValues {
+                CType = similar
+            }
+        }
+    }
+    show := addToList(similar)
+}

@@ -1,0 +1,5 @@
+plugin.smedia_frontend_contentelements.view {
+    layoutRootPath = EXT:smedia_frontend/Resources/Private/Layouts/ContentElement/
+    partialRootPath = EXT:smedia_frontend/Resources/Private/Partials/ContentElement/
+    templateRootPath = EXT:smedia_frontend/Resources/Private/Templates/ContentElement/
+}

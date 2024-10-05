@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="smedia_frontend">
+        <header/>
+        <body>
+            <trans-unit id="content_element.simple">
+                <source>Simple</source>
+            </trans-unit>
+            <trans-unit id="content_element.inline">
+                <source>Inline</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

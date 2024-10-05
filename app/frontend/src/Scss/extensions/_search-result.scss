@@ -1,0 +1,108 @@
+// Container for search results
+.tx-indexedsearch-info-sword {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+    .tx-indexedsearch-info-sword-word {
+        font-weight: bold;
+        color: #007bff; // Highlighted search word color
+    }
+}
+
+// Browse box section
+.tx-indexedsearch-browsebox {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+
+    p {
+        font-size: 1rem;
+        color: #343a40;
+        margin: 0;
+
+        strong {
+            color: #007bff; // Color for highlighting numbers
+        }
+    }
+}
+
+// Search result item
+.tx-indexedsearch-res {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .tx-indexedsearch-icon img {
+            width: 18px;
+            height: 16px;
+        }
+
+        .tx-indexedsearch-title a {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .tx-indexedsearch-percent {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-left: auto;
+        }
+    }
+
+    .tx-indexedsearch-description {
+        font-size: 0.95rem;
+        color: #495057;
+        margin-bottom: 0.75rem;
+
+        .tx-indexedsearch-redMarkup {
+            color: #dc3545;
+            font-weight: bold; // Highlights the search term in the description
+        }
+    }
+
+    dl.tx-indexedsearch-info {
+        font-size: 0.9rem;
+        color: #6c757d;
+        display: flex;
+        flex-wrap: wrap;
+
+        dt {
+            font-weight: bold;
+            width: 100px;
+        }
+
+        dd {
+            margin-left: 0;
+            flex: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .tx-indexedsearch-text-item-path a {
+            color: #007bff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

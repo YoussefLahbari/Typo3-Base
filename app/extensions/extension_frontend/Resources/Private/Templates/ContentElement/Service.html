@@ -1,0 +1,26 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="service-section">
+        <h1 class="section-title">{data.header}</h1>
+        
+        <f:for each="{service}" as="item" iteration="iterator">
+            <f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+            <div class="service-item {zebraClass}">
+                    <div class="service-content">
+                        <h2>{item.data.header}</h2>
+                        <p>{item.data.subheader}</p>
+                        <f:if condition="{item.data.button_link}">
+                            <f:link.typolink parameter="{item.data.button_link}" class="cta-button">
+                                {item.data.button_text}
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                    <div class="service-image">
+                        <f:image image="{item.image.0}" alt="{item.data.header}" treatIdAsReference="true" />
+                    </div>
+            </div>
+            </f:cycle>
+        </f:for>
+    </div>
+</f:section>

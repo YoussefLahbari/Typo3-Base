@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.custom {
+    after = common
+    header = Custom Content Elements
+    elements {
+        service {
+            iconIdentifier = smediafrontend-service
+            title = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.service
+            description = LLL:EXT:smedia_frontend/Resources/Private/Language/locallang_be.xlf:content_element.service.description
+            tt_content_defValues {
+                CType = service
+            }
+        }
+    }
+    show := addToList(service)
+}

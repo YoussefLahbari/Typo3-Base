@@ -1,0 +1,98 @@
+@use '../abstracts/variables' as *;
+.location-title{
+    font-size: 2.2rem;
+    font-weight:lighter;
+    padding: 0 0 3% 6%;
+    color: $primary-color;
+}
+.location-sub{
+    padding: 0 3% 3% 6%;
+    font-weight:lighter;
+    color: $primary-color;
+}
+.location-section {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+
+
+.map-container {
+    position: relative;
+    width: 400px;
+    height: auto;
+    border: 1px solid lightgray;
+}
+
+svg path {
+    fill: #e0e0e0;
+    stroke: #ffffff;
+    transition: fill 0.3s ease;
+    &.hovered {
+        fill: #ffde00; 
+    }
+    &.clicked {
+        fill: #ffde00;
+    }
+}
+
+    
+
+
+.state-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#state-button {
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 4px;
+    border: none;
+    display: none;
+}
+
+#state-button.active {
+    display: block;
+}
+
+#state-list {
+    margin-left: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#state-list li {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+#state-list li i {
+    margin-right: 8px;
+    transition: fill 0.3s ease;
+}
+
+#state-list li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#state-list li:hover,
+#state-list li.active {
+    color: #ffde00;
+    cursor: pointer;
+}
+
+#state-list li:hover i,
+#state-list li.active i {
+    fill: #ffde00;
+}
+
+#state-list li:hover a,
+#state-list li.active a {
+    color: #ffde00;
+}
+}

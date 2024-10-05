@@ -1,0 +1,108 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <!-- Navigation -->
+        <div class="navbar">
+        <header>
+            <nav class="navbar-menu small">
+                <ul>
+                   <!-- Loop through main navigation items -->
+                    <f:for each="{meta_menu}" as="navItem">
+                      <li>
+                          <f:link.page class="{f:if(condition: '{navItem.active} == 1', then: 'active')}" pageUid="{navItem.data.uid}" target="{navItem.target}">
+                              {navItem.title} 
+                          </f:link.page>
+                      </li>
+                    </f:for>
+                </ul>
+            </nav>
+            
+            <nav class="navbar-menu large">
+                <h1 class="navbar-brand">SCHOMMER CARS</h1>
+                <ul>
+                  <f:for each="{main_navigation}" as="navItem">
+                      <li>
+                          <f:link.page class="{f:if(condition: '{navItem.active} == 1', then: 'active')}" pageUid="{navItem.data.uid}" target="{navItem.target}">
+                              {navItem.title} 
+                          </f:link.page>
+                      </li>
+                    </f:for>
+                    
+                    <li class="search">
+                          <f:cObject typoscriptObjectPath="lib.searchForm" />
+                  </li>
+                </ul>
+            </nav>
+        </header>
+      </div>
+    <main class="content">
+        <section name="hero">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: data.uid, colPos: 0}" />
+            <f:render partial="Navigation/Breadcrumb" arguments="{_all}" />
+        </section>
+
+        <section name="content">   
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: data.uid, colPos: 10}" />
+        </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="footer__newsletter">
+        <form class="footer__form">
+          <h3 class="footer__title">Newsletter</h3>
+          <div class="footer__input-group">
+            <input type="email" placeholder="Enter Email address" class="footer__input" required>
+            <button type="submit" class="footer__button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    
+      <div class="footer__content">
+        <f:for each="{main_navigation}" as="footerItem">
+          <div class="footer__column">
+            <div class="footer__toogle">
+              <h4 class="footer__heading">
+                {footerItem.title}
+              </h4>
+              <span class="d-action">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                </svg>
+            </span>
+            </div>
+            
+            <ul class="footer__list">
+              <f:for each="{footerItem.children}" as="footerItem-sub">
+                <li>
+                  <f:link.page class="{f:if(condition: '{footerItem-sub.active} == 1', then: 'active')}" pageUid="{footerItem-sub.data.uid}" target="{footerItem-sub.target}">
+                    {footerItem-sub.title} 
+                  </f:link.page>
+                </li>
+              </f:for>
+            </ul>
+          </div>
+        </f:for>
+      </div>
+    
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Schommer Cars</p>
+        <ul class="footer__links">
+          <f:for each="{footer_menu}" as ="footerItem">
+            <li>
+              <f:link.page pageUid="{footerItem.data.uid}" target="{footerItem.target}">
+                {footerItem.title}
+              </f:link.page>
+            </li>
+          </f:for>
+        </ul>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-xing"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+      
+</f:section>

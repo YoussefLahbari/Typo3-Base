@@ -1,0 +1,40 @@
+plugin.tx_indexedsearch{
+view {
+  templateRootPaths {
+    0 = EXT:indexed_search/Resources/Private/Templates/
+    10 = {$plugin.tx_indexedsearch.view.templateRootPath ?? $indexedsearch.view.templateRootPath}
+    20 = EXT:smedia_frontend/Resources/Private/Extensions/IndexedSearch/Templates/
+  }
+
+  partialRootPaths {
+    0 = EXT:indexed_search/Resources/Private/Partials/
+    10 = {$plugin.tx_indexedsearch.view.partialRootPath ?? $indexedsearch.view.partialRootPath}
+    20 = EXT:smedia_frontend/Resources/Private/Extensions/IndexedSearch/Partials/
+  }
+  
+}
+settings{
+    displayResults = 1
+    displayAdvancedSearchLink = 0
+    displayRules = 0
+  }
+}
+
+
+lib.searchForm {
+userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+extensionName = IndexedSearch
+pluginName = Pi2
+vendorName = TYPO3
+controller = Search
+view =< plugin.tx_indexedsearch.view
+settings =< plugin.tx_indexedsearch.settings
+
+settings {
+    targetPid = 31
+    displayAdvancedSearchLink = 0
+    displayRules = 0
+    displayResults = 0
+    }
+}
+

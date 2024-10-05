@@ -1,0 +1,17 @@
+plugin.tx_news{
+view {
+    
+  templateRootPaths {
+    0 = EXT:georgringer/news/Resources/Private/Templates/
+    10 = EXT:smedia_frontend/Resources/Private/Extensions/News/Templates/
+  }
+
+  partialRootPaths {
+    0 = EXT:georgringer/news/Resources/Private/Partials/
+    10 = EXT:smedia_frontend/Resources/Private/Extensions/News/Partials/
+  }
+  
+}
+// settings{
+//   }
+}

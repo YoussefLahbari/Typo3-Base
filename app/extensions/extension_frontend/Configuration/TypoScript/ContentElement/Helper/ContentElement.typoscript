@@ -1,0 +1,25 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateName = Default
+    templateRootPaths {
+        10 = {$plugin.smedia_frontend_contentelements.view.templateRootPath}
+    }
+    partialRootPaths {
+        10 = {$plugin.smedia_frontend_contentelements.view.partialRootPath}
+    }
+    layoutRootPaths {
+        10 = {$plugin.smedia_frontend_contentelements.view.layoutRootPath}
+    }
+
+    variables {
+        backendlayout = TEXT
+        backendlayout {
+            data = pagelayout
+            replacement.10 {
+                search = pagets__
+                replace =
+            }
+            ifEmpty = default
+        }
+    }
+}

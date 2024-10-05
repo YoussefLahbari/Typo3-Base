@@ -1,0 +1,57 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="similar-products">
+        <h1 class="similar-title">{data.header}</h1>
+
+        <!-- Dynamic Tabs -->
+        <div class="tabs-container">
+            <ul class="tabs-container nav nav-tabs" id="similarProductsTabs" role="tablist">
+                <f:for each="{similar}" as="type" iteration="iteration">
+                    <li class="nav-item">
+                        <a class="nav-link {f:if(condition: iteration.isFirst, then: 'active')}"
+                            id="tab-{iteration.index}"
+                            data-bs-toggle="tab"
+                            href="#content-{iteration.index}"
+                            role="tab"
+                            aria-controls="content-{iteration.index}"
+                            aria-selected="{f:if(condition: iteration.isFirst, then: 'true', else: 'false')}">
+                            {type.data.title}
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+            <div class="tab-indicator"></div>
+        </div>
+
+        <!-- Dynamic Tab Content -->
+        <div class="tab-content">
+            <f:for each="{similar}" as="type" iteration="iteration">
+                <div class="tab-pane fade {f:if(condition: iteration.isFirst, then: 'show active')}" 
+                     id="content-{iteration.index}" 
+                     role="tabpanel" 
+                     aria-labelledby="tab-{iteration.index}">
+                    
+                    <div class="product-card container">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-5">
+                                <f:image class="hero-img" image="{type.image.0}" alt="{type.data.title}" treatIdAsReference="true" />
+                            </div>
+                            <div class="col-md-3">
+                                <p class="product-description">
+                                    {type.data.description} 
+                                </p>
+                                    <f:if condition="{type.data.action_link}">
+                                        <f:link.typolink parameter="{data.action_link}" class="btn btn-primary product-button">
+                                            {type.data.action_text}
+                                        </f:link.typolink>
+                                    </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:section>
+

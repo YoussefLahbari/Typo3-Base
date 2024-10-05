@@ -1,0 +1,8 @@
+$primary-color: #000; // Adjust this color based on your theme
+$secondary-color: #fff;
+$button-bg-color: #fff;
+$button-border-color: rgba(0, 0, 0, 0.25);
+$button-hover-color: darken($button-bg-color, 10%);
+$pagination-active-color: #000;
+$pagination-inactive-color: lighten($pagination-active-color, 60%);
+$arrow-bg-color: rgba(0, 0, 0, 0.6);

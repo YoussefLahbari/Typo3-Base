@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default"/>
+
+    <section
+        id="c{data.uid}"
+        class="ce_{data.CType}{f:if(condition: '{data.space_after_class}', then: ' space-after-{data.space_after_class}')}{f:if(condition: '{data.space_before_class}', then: ' space-before-{data.space_before_class}')}"
+    >
+        <f:render section="Main" optional="true" />
+    </section>
+</html>

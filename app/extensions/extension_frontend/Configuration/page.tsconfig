@@ -1,0 +1,2 @@
+@import 'EXT:smedia_frontend/Configuration/PageTsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'
+@import 'EXT:smedia_frontend/Configuration/PageTsConfig/Page/ContentElements/*.tsconfig'

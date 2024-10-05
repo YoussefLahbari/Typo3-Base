@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+    <div>
+        <f:for each="{inline}" as="item">
+            <h2>{item.data.title}</h2>
+
+            <f:if condition="{item.image.0}">
+                <f:image src="{item.image.0.uid}" treatIdAsReference="true" />
+            </f:if>
+        </f:for>
+    </div>
+</f:section>

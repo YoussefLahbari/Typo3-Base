@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+  <f:layout name="Default" />
+  
+  <f:section name="Header">
+  </f:section>
+  
+  <f:section name="Main">
+    <f:debug>{_all}</f:debug>
+    <h1>News List</h1>
+    <div class="news-grid">
+      <f:for each="{news}" as="new">
+        <div class="news-item">
+          <h2>{new.title}</h2>
+          <p>{new.teaser}</p>
+
+          <!-- Loop through media files -->
+          <f:if condition="{new.media}">
+            <f:then>
+              <f:for each="{new.media}" as="mediaItem">
+                <!-- Render the media file -->
+                <f:if condition="{mediaItem.uid} == {new.media.0.uid}">
+                  <f:image class="news-img" image="{mediaItem}" alt="{new.title}" />
+                </f:if>
+              </f:for>
+            </f:then>
+            <f:else>
+              <!-- Image placeholder -->
+                <img src="https://via.placeholder.com/350x150" alt="{new.title}" />
+            </f:else>
+          </f:if>
+
+          <f:link.action action="detail" arguments="{new: new}" pageUid="{settings.detailsPageUid}">
+            Read more {new.uid}
+          </f:link.action>
+        </div>
+      </f:for>
+    </div>
+  </f:section>
+</html>

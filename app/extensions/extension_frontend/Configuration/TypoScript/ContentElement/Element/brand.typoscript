@@ -1,0 +1,28 @@
+tt_content.brand =< lib.contentElement
+tt_content.brand {
+    templateName = brand
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_smediafrontend_brand_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+            orderBy = sorting
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                    as = image
+                }
+            }
+
+            as = brand
+        }
+    }
+}
